@@ -1,2 +1,2 @@
 # Slug
-Gerando Slugify Slug Url amigável
+> Gerando Slugify Slug Url amigável
