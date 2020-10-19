@@ -1,54 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gerador de Slug</title>
-<style>
-body {
-    min-height: 100vh;
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    align-items: center;
-    background: #F2F5FF;
-}
-input{
--webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    display: block;
-    padding: 6px 12px;
-    font-size: 14px;
-    line-height: 1.42857143;
-    background-color: #fff;
-    background-image: none;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-    border-radius: 5px;
-    color: #999;
-    border: 1px solid #ddd;
-	}
-input:focus {
-    color: #999;
-    border: 2px solid #ddd;
-    outline: none;
-}
-</style>
-</head>
-<body>
-<input type="text" placeholder="Digite um texto"/>
-</body>
-<script>
-document.querySelector("input").addEventListener("keyup", function(e){
-let $this = e.target;
-let  str = $this.value;
-str = str.toString().toLowerCase();
-str = str.replace(/\-\-+/g, '-').replace(/^-+/, '').replace(/-+$/, '').replace(/[\s_-]+/g, '-').replace(/\s+/g, '-').replace(/[^a-z0-9 -]/g, "");
-$this.value = str;
-});
-</script>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Gerador de Slug</title>
+      <link rel="stylesheet" href="./styles.css">
+   </head>
+   <body>
+      <input type="text" placeholder="Digite um texto"/>
+   </body>
+   <script src="./script.js"></script>
 </html>
