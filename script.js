@@ -1,12 +1,12 @@
+function gerarSlug(str) {
+  str = str.toString().toLowerCase().trim();
+  str = str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  str = str.replace(/[^a-z0-9\s-]/g, '');
+  str = str.replace(/\s+/g, '-').replace(/-+/g, '-');
+  str = str.replace(/^-+|-+$/g, '');
+  return str;
+}
+
 document.querySelector("input").addEventListener("keyup", function(e) {
-  let $this = e.target;
-  let str = $this.value;
-  str = str.toString().toLowerCase();
-  str = str.replace(/\-\-+/g, '-');
-  str = str.replace(/^-+/, ''); 
-  str = str.replace(/-+$/, ''); 
-  str = str.replace(/[\s_-]+/g, '-'); 
-  str = str.replace(/\s+/g, '-'); 
-  str = str.replace(/[^a-z0-9-]/g, ""); 
-  $this.value = str;
+  e.target.value = gerarSlug(e.target.value);
 });
